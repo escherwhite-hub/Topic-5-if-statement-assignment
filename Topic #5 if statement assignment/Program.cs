@@ -5,7 +5,10 @@
         static void Main(string[] args)
         {
             int menu;
-            Console.WriteLine("Chose a program to run. (1,2,3)");
+            Console.WriteLine("Chose a program to run.");
+            Console.WriteLine("1. Fighting weight checker");
+            Console.WriteLine("2. Simple calculator");
+            Console.WriteLine("3. Quiz");
             Int32.TryParse(Console.ReadLine(), out menu);
             Console.Clear();
             if (menu == 1)
@@ -156,7 +159,128 @@
         }
         public static void program3()
         {
-            Console.WriteLine("3");
+            string ans1, ans2, ans3, ans4, ans5;
+            double correctAns = 0;
+            double incorrectAns = 0;
+
+
+            Console.WriteLine("welcome the the quiz. Press enter to continue:");
+            Console.ReadLine();
+            Console.Clear();
+            Console.WriteLine("question 1: What country is the Great Pyramid of Giza in?");
+            ans1 = Console.ReadLine();
+
+            if (ans1.ToLower() == "egypt")
+            {
+                Console.WriteLine("correct!");
+                correctAns += 1;
+            }
+
+            else
+            {
+                Console.WriteLine("Incorrect!");
+                incorrectAns += 1;
+            }
+
+            Console.WriteLine("Press enter for the next question!");
+            Console.ReadLine();
+            Console.Clear();
+
+            Console.WriteLine("question 2: What is 5 × 6 ? ");
+            ans2 = Console.ReadLine();
+
+            if (ans2 == "thirty" || ans2 == "30")
+            {
+                Console.WriteLine("Correct!");
+                correctAns += 1;
+            }
+
+            else
+            {
+                Console.WriteLine("incorrect");
+                incorrectAns += 1;
+            }
+
+            Console.WriteLine("Press enter for the next question!");
+            Console.ReadLine();
+            Console.Clear();
+
+            Console.WriteLine("question 3: True or false, We live on planet earth ");
+            ans3 = Console.ReadLine();
+
+            if (ans3.ToLower() == "true")
+            {
+                Console.WriteLine("Correct!");
+                correctAns += 1;
+            }
+
+            else
+            {
+                Console.WriteLine("incorrect");
+                incorrectAns += 1;
+            }
+            
+            Console.WriteLine("Press enter for the next question!");
+            Console.ReadLine();
+            Console.Clear();
+
+            Console.WriteLine("question 4: What sound does a cow make? ");
+            Console.WriteLine("A. Baa");
+            Console.WriteLine("B. Moo");
+            Console.WriteLine("C. Bark");
+            Console.WriteLine("D. Meow");
+            ans4 = Console.ReadLine();
+
+            if (ans4.ToLower() == "moo" || ans4.ToLower() == "b")
+            {
+                Console.WriteLine("Correct!");
+                correctAns += 1;
+            }
+
+            else
+            {
+                Console.WriteLine("incorrect, how did you not know that");
+                incorrectAns += 1;
+            }
+
+            Console.WriteLine("Press enter for the next question!");
+            Console.ReadLine();
+            Console.Clear();
+
+            Console.WriteLine("question 5: What color do you get when you mix red and blue? ");
+            ans5 = Console.ReadLine();
+
+            if (ans5.ToLower() == "purple")
+            {
+                Console.WriteLine("Correct!");
+                correctAns += 1;
+            }
+
+            else
+            {
+                Console.WriteLine("incorrect");
+                incorrectAns += 1;
+            }
+
+            Console.WriteLine("Press enter for your score!");
+            Console.ReadLine();
+            Console.Clear();
+            double percent = correctAns / 5 * 100;
+
+            Console.WriteLine($"You got {percent}% on this quiz" );
+            if (percent == 0)
+            {
+                Console.WriteLine("Wow you managed to get no questions right! you should go back to kindergarten");
+            }
+            else if (percent == 100)
+            {
+                Console.WriteLine("Congratulations you got perfect! you're so smart");
+            }
+
+          
         }
+
+
+        
     }
 }
